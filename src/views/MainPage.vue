@@ -1,7 +1,6 @@
 <template>
   <div class="main">
     <Sidebar />
-
     <Board />
   </div>
 </template>
@@ -21,4 +20,16 @@ import Board from '@/components/Board';
 export default class MainPage extends Vue {}
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.main {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $middle) {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+  }
+}
+</style>

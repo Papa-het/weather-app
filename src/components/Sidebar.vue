@@ -13,4 +13,8 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class Sidebar extends Vue {}
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.sidebar {
+  background: #1e213a;
+}
+</style>

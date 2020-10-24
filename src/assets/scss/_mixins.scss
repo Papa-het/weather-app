@@ -1,0 +1,78 @@
+@mixin abs($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  position: absolute;
+  @include pos($top, $right, $bottom, $left);
+}
+
+@mixin pos($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin trans($params...) {
+  backface-visibility: hidden;
+  transition: $params;
+}
+
+@mixin block($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin center() {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin abs-center() {
+  position: absolute;
+  @include center();
+}
+
+@mixin fix-center() {
+  position: absolute;
+  @include center();
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-space {
+  @include flex-row();
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-column-centered {
+  @include flex-column();
+  align-items: center;
+}
+
+@mixin flex-row-centered {
+  @include flex-row();
+  justify-content: center;
+}
+
+@mixin bg-cover($url) {
+  background: url($imgBase+$url) no-repeat;
+  background-size: cover;
+}
+
+@mixin side-padding($val) {
+  padding-left: $val;
+  padding-right: $val;
+}
+
+@mixin ver-padding($val) {
+  padding-top: $val;
+  padding-bottom: $val;
+}

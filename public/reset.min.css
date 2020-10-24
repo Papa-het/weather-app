@@ -2,8 +2,10 @@
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
+  height: 100%;
 }
 body {
+  height: 100%;
   margin: 0;
 }
 h1 {

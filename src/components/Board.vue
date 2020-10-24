@@ -13,4 +13,8 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class Board extends Vue {}
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.board {
+  background: #100e1d;
+}
+</style>
